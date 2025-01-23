@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Range } from '@/components/ui/range';
 import { Dropdown } from '@/components/ui/dropdown';
 import { Text } from '@/components/ui/text';
+import { Spacer } from '@/components/ui/spacer';
 
 const fontStyles = [
   { value: 'geometric', label: 'Geometric' },
@@ -45,7 +46,10 @@ const App = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 mt-4">
+
+        <Spacer size={4} />
+
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <Text as="h3" className="mb-2">Font Style</Text>
             <Dropdown
@@ -66,7 +70,10 @@ const App = () => {
             />
           </div>
         </div>
-        <div className="mt-4">
+
+        <Spacer size={4} />
+
+        <div>
           <Text as="h3" className="mb-2">Vertical Spacing</Text>
           <Range
             min={0}
@@ -76,7 +83,10 @@ const App = () => {
             className="w-full"
           />
         </div>
-        <div className="mt-4 flex justify-center">
+
+        <Spacer size={4} />
+
+        <div className="flex justify-center">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Generate Poster
           </button>
